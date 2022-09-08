@@ -1,0 +1,276 @@
+html, body{font-size: 16px;
+line-height: 1.5;
+min-width: 400px;}
+
+img{display: inline-block;}
+
+a{transition: 0.5s case-out;}
+
+*{box-sizing: border-box;}/*создаем универсальный селектор*/
+
+/*чтобы обратиться к классу, надо поставить . и имя класса*/
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+GRID (Сетка)
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.container{
+    width: 1180px; /*у него почему-то в 9 практике стало 1180 вместо 1200, поменяла*/
+    margin-left: auto;
+    margin-right: auto;
+}
+.row{
+    
+}
+/*чтобы не было автомат.обтекания float, создаем пвсевдокласс и убираем обтекание*/
+.row:after{clear: both;
+content: ""; /*нужно добавить хотя бы пустой контент, чтоб псевдокласс заработал*/
+display: table;}
+
+.c-4{
+    width: 360px;
+    margin-left: 30px;
+    float: left;
+}
+/*делаем псевдокласс, чтобы загнать 3ю картинку в одну строку, убрать справа отступ */
+.c-4:last-child{margin-right: 0px;} 
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+HEADER
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.header{
+    background: #7B68EE;
+    background-image: url("../img/bg/grainy-texture-figure-1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh; /*здесь было 50*/
+    min-height: 400px;/*сначала сделала 400 при стилизации адаптации,у него 300*/
+    
+    color: #FFF;
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.h_title{
+    font-size: 60px;
+    margin-bottom: 30px;
+    font-family: 'PT Sans', sans-serif;
+    margin-top: -55px;
+}
+
+.h_slogan{
+    font-size: 30px;
+    line-height: 15px;
+    margin-bottom: 30px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.h_arrow{
+    font-size: 50px;
+    width: 50px;
+    margin-left: -30px;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    
+}
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+INFO
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*описываем внутренние отступы, если захотим что-то добавить*/
+.pf{
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
+/*отступы от дна на каждую строку*/
+.pf-item{
+    margin-bottom: 20px;
+}
+.title{
+    font-size: 46px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.pf-item_img{
+    margin-bottom: 20px;
+}
+.pf-item_img{
+    max-width: 100%; height: auto;
+}
+.pf-item_title{
+    font-size: 24px;
+    line-height: normal;
+    margin-bottom: 5px;
+    text-align: center;
+}
+/*классы для ссылок, поэтому добавили a*/
+.pf-item_title a{
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid #FFF;
+}
+.pf-item_title a:hover{
+    color: #0052C2;
+    border-color: rgba(0,82,194,0.4);/*он сказал, что линию можно убрать, но я оставила*/
+}
+/*направлено на абзацы, поэтому пишем что для p*/
+.pf-item_txt p{
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Single
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.pf_sp{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.pf_sp img{
+    margin-bottom: 50px;
+    max-width: 90%;
+    height: auto;
+    display: block;
+}
+
+.button_back{
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 45px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.button_back:hover{
+    color: #FFF; /*#FFFF00;*/
+    background-color: #4B0082;
+}
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+FOOTER
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.footer{
+    background-color: #4B0082; /*#DDA0DD*/
+    color: aqua;
+    padding-top: 80px;
+    padding-bottom: 200px;
+}
+footer p{
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+p.ft_name{
+    font-size: 26px;
+    line-height: normal;
+    margin-bottom: 20px: 
+}
+p.ft_soc{
+    margin-left: 20px;
+    color: #FFF;
+    font-size: 24px;
+}
+p.ft_soc_icon{
+    color: #FFF;
+    font-size: 30px;
+}
+p.ft_soc_icon a{
+    color: #FFF;
+    text-decoration: none;
+    margin-right: 28px;
+}
+p.ft_soc_icon a:hover{
+    color: #FFFF00;
+}
+
+.button{
+    margin-left: 20px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: #FFF;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    
+    border-width: 3px;
+    border-color: #FFF;
+    border-style: solid;
+    border-radius: 45px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.button:hover{
+    color: #4B0082; /*#FFFF00;*/
+    background-color: #FFF;
+}
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ADAPTASION
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+@media(max-width:1200px){
+    .container{
+        width: 100%;
+    }
+    .c-4{ 
+        width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center;
+    }
+    .header{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .h_title{
+        font-size: 28px;
+        line-height: 36px;
+        margin-bottom: 14px;
+        
+    }
+    .h_slogan{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .pf{
+        padding-bottom: 30px;
+        padding-top: 25px;
+    }
+    .title{
+        font-size: 30px;
+    }
+    .footer{
+        padding-bottom: 40px;
+        padding-top: 50px;
+    }
+}
+
