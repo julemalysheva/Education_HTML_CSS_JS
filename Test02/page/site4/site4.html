@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Создание галереи слайд-шоу</title>
+  <!-- Нормализуем стили -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <!-- Подключаем собственные стили -->
+  <link rel="stylesheet" href="css/site4.css">
+  <!-- Отображаем фавикон -->
+  <link rel="shortcut icon" type="image/x-icon" href="../site4/img/fav/i.webp">
+  <!-- Подключаем шрифты -->
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Контейнер слайдшоу -->
+  <div class="container">
+    <!-- Блок полноразмерных картинок с номерами и текстом -->
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+      <img src="img/ex1.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+      <img src="img/ex2.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+      <img src="img/ex3.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <img src="img/ex4.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+      <img src="img/ex5.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+      <img src="img/ex6.jpg" style="width:100%">
+    </div>
+    <!-- Кнопки вперед и назад -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <!--Текст на картинке -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+      <!-- Thumbnail images -->
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="img/ex1.jpg " style="width:100%" onclick="currentSlide(1)" alt="Артек_Фото 1">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="img/ex2.jpg " style="width:100%" onclick="currentSlide(2)" alt=" Артек_Фото 2">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="img/ex3.jpg" style="width:100%" onclick="currentSlide(3)" alt=" Артек_Фото 3">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="img/ex4.jpg" style="width:100%" onclick="currentSlide(4)" alt=" Артек_Фото 4">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="img/ex5.jpg" style="width:100%" onclick="currentSlide(5)" alt=" Артек_Фото 5">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="img/ex6.jpg" style="width:100%" onclick="currentSlide(6)" alt=" Артек_Фото 6">
+        </div>
+      </div>
+  </div>
+
+<script>
+
+var slideIndex = 1;
+showSlides(slideIndex);
+// кнопки вперед/назад
+function plusSlides(n) {
+ showSlides(slideIndex += n);
+}
+// управление картинками
+function currentSlide(n) {
+ showSlides(slideIndex = n);
+}
+function showSlides(n) {
+ var i;
+ var slides = document.getElementsByClassName("mySlides");
+ var dots = document.getElementsByClassName("demo");
+ var captionText = document.getElementById("caption");
+ if (n > slides.length) {slideIndex = 1}
+ if (n < 1) {slideIndex = slides.length}
+ for (i = 0; i < slides.length; i++) {
+ slides[i].style.display = "none";
+ }
+ for (i = 0; i < dots.length; i++) {
+ dots[i].className = dots[i].className.replace(" active", "");
+ }
+ slides[slideIndex-1].style.display = "block";
+ dots[slideIndex-1].className += " active";
+ captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+</script>
+
+</body>
+
+</html>
