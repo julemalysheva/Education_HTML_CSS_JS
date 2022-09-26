@@ -1,0 +1,135 @@
+* {box-sizing:border-box}
+
+/* ++++++++++++++++++++++++++++++++++
+Контейнер слайдшоу
++++++++++++++++++++++++++++++++++ */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+   }
+/* ++++++++++++++++++++++++++++++++++
+Прячем картинки по умолчанию
++++++++++++++++++++++++++++++++++ */
+.mySlides {
+    display: none;
+   }
+/* ++++++++++++++++++++++++++++++++++
+вперед/назад кнопки
++++++++++++++++++++++++++++++++++ */
+.prev, .next {
+    cursor: pointer; /*кружком*/
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+   }  
+/* ++++++++++++++++++++++++++++++++++
+Позиция кнопки "следующая" справа
++++++++++++++++++++++++++++++++++ */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+   }   
+/* ++++++++++++++++++++++++++++++++++
+hover и цвет заднего фона
++++++++++++++++++++++++++++++++++ */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+   }
+/* ++++++++++++++++++++++++++++++++++
+текст на картинке
++++++++++++++++++++++++++++++++++ */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+   }   
+/* ++++++++++++++++++++++++++++++++++
+текст по номеру 1/ из n
++++++++++++++++++++++++++++++++++ */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+   }
+/* ++++++++++++++++++++++++++++++++++
+индикаторы /точки
++++++++++++++++++++++++++++++++++ */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+   }
+.active, .dot:hover {
+    background-color: #717171;
+   }
+
+/* ++++++++++++++++++++++++++++++++++
+анимация fade
++++++++++++++++++++++++++++++++++ */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+   }
+      
+/* ++++++++++++++++++++++++++++++++++
+зачем-то сделали и закрыли
+@-webkit-keyframes fade {
+ from {opacity: .4}
+ to {opacity: 1}
+}
+@keyframes fade {
+ from {opacity: .4}
+ to {opacity: 1}
+           
+   
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++
+Кнопка Назад
++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.pf_sp{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.button_back{
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 45px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.button_back:hover{
+    color: #FFF; /*#FFFF00;*/
+    background-color: #4B0082;
+}
