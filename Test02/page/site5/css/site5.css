@@ -1,0 +1,67 @@
+* {box-sizing:border-box}
+
+
+/* ++++++++++++++++++++++++++++++++++
+ползунок-сравнение
++++++++++++++++++++++++++++++++++ */
+.txt{text-align: center}
+
+.img-comp-container {
+ position: relative;
+ height: 600px; /* Соответствует высоте картинок*/
+ margin-left: 560px;/*откуда такой отступ560? не центр */
+
+}
+.img-comp-img {
+    position: absolute;
+    width: auto;
+    height: auto;
+    overflow: hidden;/*друг на друга наехали*/
+   }
+.img-comp-img img {
+    display: block;
+    vertical-align: middle;
+   
+   }
+.img-comp-slider {
+    position: absolute;
+    z-index: 9;
+    cursor: ew-resize;
+    width: 40px;
+    height: 40px;
+    background-color: palevioletred;
+    opacity: 0.7;
+    border-radius: 50%;
+   }
+         
+   
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++
+Кнопка Назад
++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.pf_sp{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.button_back{
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 45px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.button_back:hover{
+    color: #FFF; /*#FFFF00;*/
+    background-color: #4B0082;
+}

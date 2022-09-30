@@ -1,118 +1,88 @@
 <!DOCTYPE html>
-<html lang="ru">
-    <head>
-        <title>Первая страница</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-       <!после подключения этой ссылки начинают работать иконки>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="css/main.css">
-        <style>
-            #para1{
-                text-align: center;
-                color: green;
-                font-size: 200%;
-            }
-            .demo{
-                text-align: center;
-                }
-            h1.demo{
-                color: red;
-            }
-            p.demo{
-                text-align: center;
-                color: blue;
-            }
-            /*p, h1 {font-size: 200%;}*/
-            h1:hover{font-size: 200%;
-            color: green;
-            background-color: bisque}
-        </style>
-        </head>
-        <body>
-            <h1 title="просто всплывающая подсказка">Моя первая страница</h1>
-            <p>Рис, гречка два отличных источника углеводов. Именно их при диете можно употреблять в небольших порциях. <br>Если уж без кофе совсем никак, тогда лучше пить его уже после еды, и с добавлением молока. </p>
-            <a href="http://xn--80abnu0aked8e.xn--p1ai/">ссылка на рыбу</a>
-            <a href="/img/1.jpg">ссылка на картинку</a>
-            <img src="img/1.jpg" alt="текст альтернативной картинки" width="300">
-            <button>Нажми на меня</button>
-            <h2>Ненумерованный список</h2>
-            <ul>
-                <p>Напитки на выбор:</p>
-                <li>кофе</li>
-                <li>чай</li>
-                <li>молоко</li>
-            </ul>
-            <h2>Нумерованный список</h2>
-            <ol>
-                <p style="color: red">Напитки на выбор:</p>
-                <li>кофе</li>
-                <li>чай</li>
-                <li>молоко</li>
-            </ol>
-            <pre style="color: aqua">
-            Мой мир моя крепость
-            
-               Мой мир моя крепость
-               Мой мир моя крепость
-            
-                 Мой мир моя крепость
-                 Мой мир моя крепость
-            
-            Мой мир моя крепость
-            </pre>
-            <h1 style="text-align: center">Тут у нас заголовок</h1>
-            <p><strong>С целью снизить</strong> число людей с ожирением рестораны быстрого питания и сети <ins>супермаркетов</ins> вводят <sub>новые</sub>, <i>более полезные опции</i> (например, салаты, сэндвичи с цельнозерновым <del>хлебом или напитки без сахара</del>), а также предоставляют информацию о <em>пищевой ценности</em> продуктов в меню или на упаковке. <small>Вторично разогретая пища</small>, особенно если после её приготовления прошло <mark>уже несколько часов</mark>, практически не содержит ни витаминов, <sup>ни других полезных веществ</sup>. На поведение потребителей могут повлиять не только вкусовые предпочтения, но и немедленные желания получить определенную еду.</p>
-            <blockquote cite="http://xn--80abnu0aked8e.xn--p1ai/">Жизнь в большом городе зачастую накладывает на людей очень много обязательств, которые многим мешают планировать свое время. Поэтому времени катастрофически не хватает на все, в том числе и на нормальную здоровую пищу. </blockquote>
-            <p>Аббревиатура <abbr title="язык гипертекстовой разметки">HTML</abbr> используется ... </p>
-            <br>
-            <address>
-Юля <br> Оренбург, ул. Просторная <br> д.23, кв. 37
-</address>
-            <!Тут у нас с вами коментарий>
-            <bdo dir="rtl">тут у нас с вами текст</bdo>
-            
-            <table>
-                <tr>
-                    <th>Фамилия</th>
-                    <th>Имя</th>
-                    <th>Телефон</th>
-                </tr>
-                <tr>
-                    <th>Иванов</th>
-                    <th>Иван</th>
-                    <th>89121111111</th>
-                </tr>
-                <tr>
-                    <th>Иванов</th>
-                    <th>Иван</th>
-                    <th>89121111111</th>
-                </tr>
-                <tr>
-                    <th>Иванов</th>
-                    <th>Иван</th>
-                    <th>89121111111</th>
-                </tr>
-            </table>
-            
-            <div>Hello </div>
-            <div>word </div>
-            <span>Hello </span>
-            <span>word </span>
-            
-            <div style="background-color: aquamarine;color: brown;padding: 20px">
-             <h1 style="text-align: center">Тут у нас заголовок</h1>  
-                <p>Жизнь в большом городе зачастую накладывает на людей очень много обязательств, которые многим мешают планировать свое время. Поэтому времени катастрофически не хватает на все, в том числе и на нормальную здоровую пищу. </p>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Подключение собственных стилей -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <title>Bootstrap</title>
+
+    <style>
+        .carousel-inner img {
+            width: 100%;
+            /*height: 100%;убрала параметр, чтоб не были по полнойму в высоту*/
+        }
+    </style>
+</head>
+
+<body style="font-size: 24px">
+
+
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!--indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+            <li data-target="#demo" data-slide-to="3"></li>
+        </ul>
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/2.jpg" width="1200px" height="800px">
+                <div class="carousel-caption">
+                    <h3>Some text</h3>
+                    <p>some more text</p>
+                </div>
             </div>
-            <i class="fa fa-grav" aria-hidden="true"></i>
-            <i class="fa fa-asterisk" aria-hidden="true"></i>
-            <h1 class="demo">Заголовок тест по центру</h1>
-            <p class="demo">много текста</p>
-            <p class="demo ladge">много разного текста</p>
-            <p id="para1">много разного текста</p>
-            <p>много разного текста</p>
-            <p>много разного текста</p>
-            
-        </body>
+            <div class="carousel-item">
+                <img src="img/1.jpg" width="1200px" height="800px">
+                <div class="carousel-caption">
+                    <h3>Some text</h3>
+                    <p>some more text</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/4.jpg" width="1200px" height="800px">
+                <div class="carousel-caption">
+                    <h3>Some text</h3>
+                    <p>some more text</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/5.jpg" width="1200px" height="800px">
+                <div class="carousel-caption">
+                    <h3>Some text</h3>
+                    <p>some more text</p>
+                </div>
+            </div>
+        </div>
+
+        <!--left and right -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+
     
+
+</body>
+
 </html>
