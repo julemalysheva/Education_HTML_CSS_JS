@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap');
+
+html, body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 1rem;
+}
+
+.grid-container {
+	display: grid;
+    grid-template-columns: repeat (2, 1fr);	
+	grid-template-rows: repeat(6, 1fr);
+	grid-template-areas:
+	"menu menu"
+    "nav nav"
+    "section1 section1"
+	"about about"
+	"dignity dignity"
+	"footer footer";
+    margin: 0 auto;
+    max-width: 1280px; /*оставила 1280, хотя макет 1180*/
+	position: relative;
+	grid-column-gap: 0;
+	grid-row-gap: 0;
+	height: 100vh;
+}
+
+
+.grid-item {
+	width: 100% !important;
+    background-size: cover !important;
+}
+
+h1 {
+	font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 3.75rem;
+}
+
+h2 {	
+    font-family: 'Lato', sans-serif;
+    font-size: 1.87rem;
+    font-weight: 400;
+    line-height: 2.25rem;
+    color: #445161; /*см.цвета потом*/
+}
+
+h3 {	
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.87rem;
+    color: #445161;
+}
+
+p {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	text-align: left;
+    line-height: 1.5rem;
+    color: #333333;
+}
+.header{
+    display: grid;
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+    background-color: #FFE0B1; 
+}
+
+.menu {
+    display: grid;	
+    /*display: -ms-grid;
+    grid-template-columns: 50px 458px 253px 469px 50px;
+    grid-template-rows: auto;*/
+	grid-row: 2 / 3;
+    grid-column: 1 / 3;
+    background-color: #445161; 
+}
+
+/*вернуться и описать нормально menu nav и section1*/
+.section1 {
+    display: grid;
+    grid-row: 3 / 4;
+	grid-column: 1 / 3;
+    background-color: #ffffff;
+    /*описать картинку фона*/
+    background-image: url("../img/bg/section1.png");
+}
+
+
+/*пока не очень работает, разобраться почему
+вместить список*/
+.about {
+	display: grid;
+    /*display: -ms-grid; добавила по примеру хедера в шаблоне,вдруг поможет нормально все расположить?*/
+    grid-template-columns: repeat (5, 1fr);
+    grid-template-rows: auto;
+	grid-row: 4 / 5;
+	grid-column: 1 / 3;
+    background-color: #ffffff;
+}
+
+.description_about {
+	grid-column: 2 / 3;
+	grid-row: 1 / 3;	
+    grid-template-columns: 50px 649px 101px 430px 50px;
+    grid-template-rows: 150px 28px 30px 63px 60px 60px 60px 60px;
+    /*grid-template-rows: 50px 28px 30px 63px 20px 60px 45px 48px;пробую еще по другому, так было*/
+}
+
+.description_about h2 {
+	grid-column: 2 / 3;
+	grid-row: 1 / 2;
+	margin-top: 1.47em;
+}
+
+.about__text1 {
+	grid-column: 2 / 3;
+	grid-row: 3 / 4; 
+}
+
+ .about__text2 {
+	grid-column: 2 / 3;
+	grid-row: 5 / 6;
+} 
+
+.image_about {
+    grid-column: 4 / 5;
+	grid-row: 2 / 3;
+    height: 245px; 
+    background-color: #445161;
+}
+
+/*Описываем секцию Преимущества, 5ая строка в grid*/
+.dignity {
+	display: grid;
+    grid-row: 5 / 6;
+    grid-column: 1 / 3;	
+    grid-template-columns: 50px 32px 549px 32px 526px 73px;
+    grid-template-rows: 120px 28px 29px 63px 35px 63px 36px 63px 51px;
+    background-color: #f5f5f5;
+}
+/*в первой строке, где 120 - было 49*/
+
+.dignity h2 {
+    grid-column: 3 / 6;
+    text-align: center;
+    margin-top: 1.4em;
+    /*margin-bottom: 1.4em;добавила, чтоб не наезжало - пробую*/
+}
+
+.dignity img {
+	width: 100%;
+}
+.dignity p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding-top: .4em;
+    padding-left: 9px;
+}
+/*подогнать картинку под размер*/
+.plus {
+    width: 22px;
+	height: 22px;
+	background-color: #445161;
+	padding: .3em;
+}
+
+.pluses__img1 {
+	grid-row: 4 / 5;
+	grid-column: 2 / 3;
+}
+
+.pluses__img2 {
+	grid-row: 6 / 7;
+	grid-column: 2 / 3;
+}
+
+.pluses__img3 {
+	grid-row: 8 / 9;
+	grid-column: 2 / 3;
+}
+
+.pluses__img4 {
+	grid-row: 4 / 5;
+	grid-column: 4 / 5;
+    margin-left: 9px;
+}
+
+.pluses__img5 {
+	grid-row: 6 / 7;
+	grid-column: 4 / 5;
+    margin-left: 9px;
+}
+
+.pluses__img6 {
+	grid-row: 8 / 9;
+	grid-column: 4 / 5;
+    margin-left: 9px;
+}
+
+.dignity1  {
+	grid-row: 3 / 4;
+	grid-column: 3 / 4;
+}
+
+.dignity2 {
+	grid-row: 5 / 6;
+	grid-column: 3 / 4;
+	padding-top: .5em;
+}
+
+.dignity3 {
+	grid-row: 7 / 8;
+	grid-column: 3 / 4;
+	padding-top: .5em;
+}
+
+.dignity4 {
+	grid-row: 3 / 4;
+	grid-column: 5 / 6;
+    padding-left: 9px;
+}
+
+.dignity5 {
+	grid-row: 5 / 6;
+	grid-column: 5 / 6;
+    padding: .5em 0 0 9px;
+}
+
+.dignity6 {
+	grid-row: 7 / 8;
+	grid-column: 5 / 6;
+    padding: .5em 0 0 9px;
+}
+
+.footer {	
+	display: grid;
+    grid-row: 7 / 8;
+	grid-column: 1 / 3;
+	grid-template-columns: 249px 500px 45px 240px 246px;
+	grid-template-rows: 53px 22px 31px 230px 64px 109px;
+	background-color: #445162;
+}
+
+.footer h2 {
+    grid-row: 1 / 2;
+	grid-column: 2 / 4;
+    text-align: center;
+    margin: 1.5em 0 0 8.1em;	
+    color: #ffffff;
+}
+
+.footer_form_contact {
+	display: grid;
+	grid-row: 4 / 7;
+	grid-column: 2 / 3;
+}
+
+.myForm {
+	display: grid;
+	grid-template-columns: 180px 140px 180px;
+	grid-template-rows: 40px 21px 40px 22px 170px 21px 40px;
+}
+
+.myForm .input {
+	font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;	
+	border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: .1em 0 0 0.62em;
+	background-color: #ffffff;    
+    color: #445162;
+}
+
+#customer_name {
+	grid-row: 1 / 2;
+	grid-column: 1 / 4;
+}
+
+#email_address {
+	grid-row: 3 / 4;
+	grid-column: 1 / 4;
+}
+
+#message {
+	grid-row: 5 / 6;
+	grid-column: 1 / 4;
+}
+
+.myForm button{
+	grid-row: 7 / 8;
+	grid-column: 2 / 3;    
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    text-transform: uppercase;	
+	border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #445162;
+}
+
+.myForm button:hover {
+	background: #5F9EA0;
+	transition: all .3s ease;
+}
+
+.footer_contacts_social {
+    display: grid;
+    grid-row: 4 / 5;
+	grid-column: 4 / 6;
+	grid-template-columns: 26px 221px;
+	grid-template-rows: 15px 29px 12px 29px 15px 30px 12px 37px 42px;
+
+}
+
+.footer_contacts_social span {
+	margin: .4em 0 0 .4em;
+}
+
+.skype__img {
+	grid-row: 1 / 2;
+	grid-column: 1 / 2;
+}
+
+.icq__img {
+	grid-row: 3 / 4;
+	grid-column: 1 / 2;
+}
+
+.email__img {
+	grid-row: 5 / 6;
+	grid-column: 1 / 2;	
+}
+
+.phone__img {
+	grid-row: 7 / 8;
+	grid-column: 1 / 2;
+}
+
+.login_skype  {
+	grid-row: 1 / 2;
+	grid-column: 2 / 3;
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.icq_login  {
+	grid-row: 3 / 4;
+	grid-column: 2 / 3;
+	color: #ffffff;
+}
+
+.email_address {
+	grid-row: 5 / 6;
+	grid-column: 2 / 3;
+	color: #ffffff;
+}
+
+.footer_contacts_social .email_address {
+	margin-top: .1em;
+}
+
+.phone_number {
+	grid-row: 7 / 8;
+	grid-column: 2 / 3;
+	color: #ffffff;
+}
+
+.social_icons {
+	grid-row: 9 / 10;
+	grid-column: 1 / 5;
+	margin-top: .16em;
+}
+
+.social_icons a {
+	text-decoration: none;
+}
+
+.twitter__icon:hover,
+.facebook__icon:hover,
+.linkedin__icon:hover,
+.google__icon:hover,
+.youtube__icon:hover{
+	outline: 2px solid #4682B4;
+	transition: all .2s ease;
+	-moz-outline-radius: 15px; /* ONLY FOR FIREFOX */	
+}
+
+.twitter__icon,
+.facebook__icon {
+    margin-bottom: .1em;
+}
